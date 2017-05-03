@@ -1,0 +1,69 @@
+<div class="col-sm-12" ng-controller="MainCtrl">
+	<div class="col-sm-9">
+		<div class="panel panel-default">
+			<div class="panel panel-heading">
+				<div class="container-fluid" >
+					<div class="row">
+						<div class="col-sm-1" ng-init="topflag=true">
+							<button ng-click="topflag=true" class="btn btn-primary">top1</button>
+						</div>
+						<span>  </span>
+						<div class="col-sm-1">
+							<button ng-click="topflag=false" class="btn btn-primary">top2</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div ng-show="topflag">
+							<span>top1 on click</span>
+							<button class="btn btn-success"
+							ng-click="topClick('app.index.detail1')">left1</button>
+						</div>
+						<div ng-show="!topflag">
+							<span>top2 on click</span>
+							<button class="btn btn-danger"
+							ng-click="topClick('app.index.detail2')">left2</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel panel-heading">
+				<div class="container-fluid" >
+					<div class="row">
+						<div class="col-sm-1" ng-init="downflag=true">
+							<button ng-click="downflag=true" class="btn btn-warning">down1</button>
+						</div>
+						<span>  </span>
+						<div class="col-sm-1">
+							<button ng-click="downflag=false" class="btn btn-warning">down2</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div ng-show="downflag">
+							<span>down1 on click</span>
+							<button class="btn btn-success"
+							ng-click="downClick('app.index.detail3','test3')">left3</button>
+						</div>
+						<div ng-show="!downflag">
+							<span>down2 on click</span>
+							<button class="btn btn-danger"
+							ng-click="downClick('app.index.detail4','test4')">left4</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div ui-view></div>
+	</div>
+</div>

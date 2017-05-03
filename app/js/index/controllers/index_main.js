@@ -1,0 +1,9 @@
+angular.module('app').controller('MainCtrl',['$scope','$state',
+	function($scope,$state){
+		$scope.topClick=function(url){
+			$state.go(url);
+		}
+		$scope.downClick=function(url,param){
+			$state.go(url,{param:param});
+		}
+}]);
